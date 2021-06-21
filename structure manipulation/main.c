@@ -1,30 +1,3 @@
-/********************************************
-                TASK DISCRIPTION
-                Write a C program XXXXXXXX
-    Extract:
-        Input:
-                DATA: XXXXXXXX
-                INSTRUCTION: XXXXXXXX
-        Processing:
-                    XXXXXXXX
-        Output:
-                    XXXXXXXX
-***********************************************/
-/**********************************************
-                AUTHOR DETAILS
-Author Name: Hammad Ali (fa20-bcs-087)
-program-name: XXXXXXX.c
-program-version: 1.0
-license: public domain
-
-               SYSTEM SPECIFICATIONS
-Operating System: Windows 10
-Compiler: Code::Blocks 20.03
-Start Date: 21/6/21
-End Date: 21/6/21
-
-**********************************************/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
