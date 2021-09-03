@@ -1,2 +1,10 @@
 tic-tac-toe/main.exe
+<<<<<<< HEAD
 replace-one-word-in-string/main.exe
+||||||| 87e2134
+=======
+replace-one-word-in-string/main.exe
+replace-one-word-in-string/.vscode/launch.json
+replace-one-word-in-string/.vscode/tasks.json
+replace-one-word-in-string/.vscode/settings.json
+>>>>>>> test
