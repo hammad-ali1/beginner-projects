@@ -4,22 +4,24 @@
 using namespace std;
 
 void replace_word(string &word, const string &search, const string &replace){
-    auto found = word.find(search); //Index of keyword to be replaced
-    if(found == string::npos){ //Keyword not found
-        cout << "Error! keyoword: " << search << " is not present in string: " << word << endl;
-    }else{
-        auto found_end = found + search.length(); //Index of character after the end of keyword
-        if(found_end == word.length() || (word[found_end] == ' ' && word[found - 1] == ' ')){ //Verify if keyword is an exact word in the string
-            word.replace(found, found_end - found, replace ); 
+    size_t found, found_end, start = 0;
+    do{
+        found = word.find(search, start); //Index of keyword to be replaced
+        if(found == string::npos){ //Keyword not found
+            cout << "Error! keyoword: " << search << " does not match an exact word in string: " << word << endl;
+            return;
         }else{
-            cout << "Warning! keyword: " << search << " does not match an exact word in string: " << word << endl;
-            cout << "Enter Y to still replace keyword in string: ";
-            string choice;
-            cin >> choice;
-            if(choice == "Y" || choice == "y")
-                word.replace(found, found_end - found, replace );
+            found_end = found + search.length(); //Index of character after the end of keyword
         }
-    }
+        start = found_end;
+        //Keep looping untill a word exactly matches with keyword
+        /* Loop ends in following conditions
+           1) Index of keyword is zero i.e (found = 0) OR Character before the index(found) is a whitespace
+           AND
+           2) Index of keyword is the length of string i.e (found = word.length()) OR Character after the index(found) is a whitespace
+        */
+    }while( !(( found == 0 || word[found - 1] == ' ') && (found_end == word.length() || word[found_end] == ' ')) );
+    word.replace(found, found_end - found, replace ); 
 }
 
 int main()
