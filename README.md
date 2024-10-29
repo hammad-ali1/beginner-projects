@@ -1,2 +1,2 @@
 # Random-Programs 
-Random C programs for beginners in Progamming Fundamentals
+Random C/C++ programs for beginners in Progamming Fundamentals
